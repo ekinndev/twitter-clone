@@ -3,7 +3,7 @@ import NavigationButton from './navigation-button';
 import TextBold from './text-title';
 import { Twitter, Home, Explore, Notification, Messages, Bookmark, Lists, Profile, More } from './icons';
 import styles from './navigation.module.css';
-const Navigation = ({ selectedKey }) => {
+const Navigation = ({ flat=false,selectedKey }) => {
   return (
     <nav className={styles.nav}>
       <NavigationButton>
