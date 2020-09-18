@@ -1,12 +1,14 @@
 import React from 'react';
 import * as Icons from '../components/icons';
+import Photo from '../components/photo';
+import ProfileBox from '../components/profile-box';
 
 export default {
   title: 'Icons'
 };
 
 export const Icon = () => (
-  <div className="icons">
+  <div className='icons'>
     <Icons.ArrowBottom></Icons.ArrowBottom>
     <Icons.Bookmark></Icons.Bookmark>
     <Icons.BookmarkFill></Icons.BookmarkFill>
@@ -37,3 +39,5 @@ export const Icon = () => (
     <Icons.Twitter></Icons.Twitter>
   </div>
 );
+export const ProfilePhoto = () => <Photo />;
+export const Box = () => <ProfileBox />;
