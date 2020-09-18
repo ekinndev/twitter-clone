@@ -1,8 +1,7 @@
 .navButton {
   position: relative;
   padding: 10px;
- 
- 
+
   svg {
     font-size: 26px;
   }
@@ -13,7 +12,7 @@
 }
 
 .navButtonSelected {
-  color: var(--c-theme);
+  color: var(--c-theme) !important;
 }
 .notify {
   position: absolute;

@@ -16,13 +16,13 @@ const MENU = [
   { key: 'more', icon: <More />, title: 'More', notify: 0 }
 ];
 
-const Navigation = ({ flat = false, selectedKey }) => {
+const Navigation = ({ flat = false, selectedKey = 'home' }) => {
   return (
     <nav className={styles.nav}>
       {MENU.map(menu => {
         const showTitle = !flat && menu.title.length > 0;
         return (
-          <NavigationButton key={menu.key} notify={menu.notify && menu.notify} selected={selectedKey === menu.key}>
+          <NavigationButton key={menu.key} selected={selectedKey === menu.key} notify={menu.notify && menu.notify}>
             {menu.icon}
             {showTitle && <TextTitle>{menu.title}</TextTitle>}
           </NavigationButton>
