@@ -1,46 +1,33 @@
 import React from 'react';
 import NavigationButton from './navigation-button';
-import TextBold from './text-title';
+import TextTitle from './text-title';
 import { Twitter, Home, Explore, Notification, Messages, Bookmark, Lists, Profile, More } from './icons';
 import styles from './navigation.module.css';
-const Navigation = ({ flat=false,selectedKey }) => {
+
+const MENU = [
+  { key: 'twitter', icon: <Twitter />, title: '', notify: 0 },
+  { key: 'home', icon: <Home />, title: 'Home', notify: 0 },
+  { key: 'explore', icon: <Explore />, title: 'Explore', notify: 0 },
+  { key: 'notification', icon: <Notification />, title: 'Notification', notify: 17 },
+  { key: 'messages', icon: <Messages />, title: 'Messages', notify: 0 },
+  { key: 'bookmark', icon: <Bookmark />, title: 'Bookmark', notify: 0 },
+  { key: 'lists', icon: <Lists />, title: 'Lists', notify: 0 },
+  { key: 'profile', icon: <Profile />, title: 'Profile', notify: 0 },
+  { key: 'more', icon: <More />, title: 'More', notify: 0 }
+];
+
+const Navigation = ({ flat = false, selectedKey }) => {
   return (
     <nav className={styles.nav}>
-      <NavigationButton>
-        <Twitter />
-      </NavigationButton>
-      <NavigationButton selected={selectedKey === 'home'}>
-        <Home />
-        <TextBold>Home</TextBold>
-      </NavigationButton>
-      <NavigationButton selected={selectedKey === 'explore'}>
-        <Explore />
-        <TextBold>Explore</TextBold>
-      </NavigationButton>
-      <NavigationButton notify={17} selected={selectedKey === 'notification'}>
-        <Notification />
-        <TextBold>Notification</TextBold>
-      </NavigationButton>
-      <NavigationButton selected={selectedKey === 'messages'}>
-        <Messages />
-        <TextBold>Messages</TextBold>
-      </NavigationButton>
-      <NavigationButton selected={selectedKey === 'bookmark'}>
-        <Bookmark />
-        <TextBold>Bookmark</TextBold>
-      </NavigationButton>
-      <NavigationButton selected={selectedKey === 'lists'}>
-        <Lists />
-        <TextBold>Lists</TextBold>
-      </NavigationButton>
-      <NavigationButton selected={selectedKey === 'profile'}>
-        <Profile />
-        <TextBold>Profile</TextBold>
-      </NavigationButton>
-      <NavigationButton selected={selectedKey === 'more'}>
-        <More />
-        <TextBold>More</TextBold>
-      </NavigationButton>
+      {MENU.map(menu => {
+        const showTitle = !flat && menu.title.length > 0;
+        return (
+          <NavigationButton key={menu.key} notify={menu.notify && menu.notify} selected={selectedKey === menu.key}>
+            {menu.icon}
+            {showTitle && <TextTitle>{menu.title}</TextTitle>}
+          </NavigationButton>
+        );
+      })}
     </nav>
   );
 };

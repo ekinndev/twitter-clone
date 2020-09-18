@@ -5,8 +5,8 @@ import cn from 'classnames';
 const NavigationButton = ({ notify, children, selected, ...props }) => {
   return (
     <Button className={cn(styles.navButton, selected && styles.navButtonSelected)} {...props}>
+      {notify > 0 && <span className={styles.notify}>{notify}</span>}
       {children}
-      {notify && <span className={styles.notify}>{notify}</span>}
     </Button>
   );
 };
