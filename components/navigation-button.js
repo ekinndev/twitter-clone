@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './navigation-button.module.css';
 import Button from './Button';
 import cn from 'classnames';
-const NavigationButton = ({ notify, children, selected, ...props }) => {
+const NavigationButton = ({ href, notify,className, children, selected, ...props }) => {
   return (
-    <Button className={cn(styles.navButton, selected && styles.navButtonSelected)} {...props}>
+    <Button className={cn(styles.navButton, selected && styles.navButtonSelected,className)} href={href} {...props}>
       {notify > 0 && <span className={styles.notify}>{notify}</span>}
       {children}
     </Button>
