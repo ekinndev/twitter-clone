@@ -8,84 +8,82 @@ export default (req, res) => {
   res.setHeader('Content-Type', 'application/json');
   res.json([
     {
-      name: 'Ekin Abalıoğlu',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Hello World',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
+      created_at: new Date(dates[getRandomInt(2)]),
+      retweet_count: 5,
+      favorite_count: 10,
+      retweeted: false,
+      favorited: true,
+      text: 'Hello World',
+      user: {
+        name: 'Ekin Abalıoğlu',
+        profile_image_url_https: 'https://source.unsplash.com/random/300x300',
+        screen_name: 'ekinndev'
+      }
     },
     {
-      name: 'Batuhan Öz',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Test',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
+      created_at: new Date(dates[getRandomInt(2)]),
+      retweet_count: 5,
+      favorite_count: 10,
+      retweeted: false,
+      favorited: true,
+      text: 'Hello World',
+      user: {
+        name: 'Ekin Abalıoğlu',
+        profile_image_url_https: 'https://source.unsplash.com/random/300x300',
+        screen_name: 'ekinndev'
+      }
     },
     {
-      name: 'Buğrahan Boztepe',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Hello World',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
+      created_at: new Date(dates[getRandomInt(2)]),
+      retweet_count: 5,
+      favorite_count: 10,
+      retweeted: false,
+      favorited: true,
+      text: 'Hello World',
+      user: {
+        name: 'Ekin Abalıoğlu',
+        profile_image_url_https: 'https://source.unsplash.com/random/300x300',
+        screen_name: 'ekinndev'
+      }
     },
     {
-      name: 'Beren Saat',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Hello World',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
+      created_at: new Date(dates[getRandomInt(2)]),
+      retweet_count: 5,
+      favorite_count: 10,
+      retweeted: false,
+      favorited: true,
+      text: 'Hello World',
+      user: {
+        name: 'Ekin Abalıoğlu',
+        profile_image_url_https: 'https://source.unsplash.com/random/300x300',
+        screen_name: 'ekinndev'
+      }
     },
     {
-      name: 'Salih Kaan',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Hello World',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
+      created_at: new Date(dates[getRandomInt(2)]),
+      retweet_count: 5,
+      favorite_count: 10,
+      retweeted: false,
+      favorited: true,
+      text: 'Hello World',
+      user: {
+        name: 'Ekin Abalıoğlu',
+        profile_image_url_https: 'https://source.unsplash.com/random/300x300',
+        screen_name: 'ekinndev'
+      }
     },
     {
-      name: 'JS Turkey',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Hello World',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
-    },
-    {
-      name: 'Made With Next',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Hello World',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
-    },
-    {
-      name: 'Armağan',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Hello World',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
-    },
-    {
-      name: 'Discord',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Hello World',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
-    },
-    {
-      name: 'Api Test',
-      photo: 'https://source.unsplash.com/random/300x300',
-      message: 'Hello World',
-      date: new Date(dates[getRandomInt(2)]),
-      rt: 3,
-      answer: 5
+      created_at: new Date(dates[getRandomInt(2)]),
+      retweet_count: 5,
+      favorite_count: 10,
+      retweeted: false,
+      favorited: true,
+      text: 'Hello World',
+      user: {
+        name: 'Ekin Abalıoğlu',
+        profile_image_url_https: 'https://source.unsplash.com/random/300x300',
+        screen_name: 'ekinndev'
+      }
     }
   ]);
 };

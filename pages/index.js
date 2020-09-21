@@ -1,10 +1,19 @@
+import React from 'react';
+import useSWR from 'swr';
 import Layout from '../components/layout';
 import Tweet from '../components/tweet';
+const fetcher = url => fetch(url).then(r => r.json());
 
 function HomePage() {
+  const { data, error } = useSWR('/api/tweet', fetcher);
+
   return (
     <Layout>
-      <Tweet name="Ekin Abalıoğlu" slug="ekinndev" dateTime={new Date("2020-08-02")} >Hello World</Tweet>
+      {!data && <p>Loading...</p>}
+
+      {data?.map((tweet, i) => (
+        <Tweet key={i} {...tweet} />
+      ))}
     </Layout>
   );
 }
