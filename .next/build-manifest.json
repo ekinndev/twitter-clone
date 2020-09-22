@@ -29,10 +29,25 @@
       "static/chunks/webpack.js",
       "static/chunks/pages/_error.js"
     ],
-    "/more": [
+    "/explore": [
       "static/chunks/main.js",
       "static/chunks/webpack.js",
-      "static/chunks/pages/more.js"
+      "static/chunks/pages/explore.js"
+    ],
+    "/messages": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/messages.js"
+    ],
+    "/next/dist/pages/_error": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/next/dist/pages/_error.js"
+    ],
+    "/notifications": [
+      "static/chunks/main.js",
+      "static/chunks/webpack.js",
+      "static/chunks/pages/notifications.js"
     ]
   },
   "ampFirstPages": []

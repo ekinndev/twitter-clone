@@ -3,6 +3,9 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/more": "pages/more.js",
-  "/api/tweet": "pages/api/tweet.js"
+  "/next/dist/pages/_error": "pages/next/dist/pages/_error.js",
+  "/api/tweet": "pages/api/tweet.js",
+  "/explore": "pages/explore.js",
+  "/notifications": "pages/notifications.js",
+  "/messages": "pages/messages.js"
 }
